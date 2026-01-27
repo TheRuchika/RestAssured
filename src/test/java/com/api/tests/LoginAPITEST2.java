@@ -13,9 +13,9 @@ public class LoginAPITEST2 {
 
     public void loginTest(){
         AuthService authService = new AuthService();
-        Response response = authService.login("{\"username\": \"ruchikapromodya@gmail.com\", \"password\": \"Gq123456\"}");
+        //Response response = authService.login("{\"username\": \"ruchikapromodya@gmail.com\", \"password\": \"Gq123456\"}");
 
 
-        System.out.println(response.asPrettyString());
+        //System.out.println(response.asPrettyString());
     }
 }
