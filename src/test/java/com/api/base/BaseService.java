@@ -24,4 +24,18 @@ public class BaseService { // Wrapper for RS
         return requestSpecification.contentType(ContentType.JSON).body(payload).post(endpoint);
 
     }
+
+    protected Response getRequest(String endpoint){
+        return requestSpecification.get(endpoint);
+
+    }
+
+    protected void setAuthToken (String token){
+        requestSpecification.header("Authorization", "Bearer" + token);
+    }
+
+    protected Response putRequest(Object payload, String endpoint){
+        return requestSpecification.contentType(ContentType.JSON).body(payload).put(endpoint);
+
+    }
 }
