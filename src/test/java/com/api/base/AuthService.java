@@ -16,12 +16,14 @@ public class AuthService extends BaseService {
     }
 
     public Response signUp(SignUpRequest payload){
-        return postRequest(payload, BASE_PATH+ "signup");
+        return postRequest(payload, BASE_PATH + "signup");
     }
 
     public Response forgotPassword(String emailAddress){
         HashMap<String,String> payload = new HashMap<String, String>();
         payload.put("email",emailAddress);
-        return postRequest(payload, BASE_PATH+ "forgot-password");
+
+        return postRequest(payload, BASE_PATH + "forgot-password");
     }
+
 }

@@ -1,5 +1,6 @@
 package com.api.base;
 
+import com.api.filters.LoginFilter;
 import com.api.models.request.LoginRequest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -15,6 +16,10 @@ public class BaseService { // Wrapper for RS
 
     private static final String BASE_URL = "http://64.227.160.186:8080";
     private RequestSpecification requestSpecification;
+
+    static {
+        RestAssured.filters(new LoginFilter());
+    }
 
     public BaseService(){
         requestSpecification = RestAssured.given().baseUri(BASE_URL);
