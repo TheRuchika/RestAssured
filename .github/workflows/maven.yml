@@ -22,3 +22,9 @@ jobs:
 
       - name: Execute Tests
         run: mvn clean test -Dsuite=Test_Suite
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Logs
+          path: logs/
